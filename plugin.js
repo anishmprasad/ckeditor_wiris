@@ -4847,7 +4847,6 @@
         }(e, [{
             key: "init",
             value: function() {
-                debugger;
                 this.language = this.getLanguage();
                 var e = y.newListener("onLoad", function() {
                     this.callbackFunction(this.callbackMethodArguments)
@@ -5575,7 +5574,6 @@
                     allowedContent: e,
                     requiredContent: e,
                     exec: function(e) {
-                        debugger;
                         this.core.getCustomEditors().disable(),
                         this.openNewFormulaEditor()
                     }
@@ -5750,13 +5748,11 @@
                 "wiriscontextpath"in e.config && (t.configurationService = e.config.wiriscontextpath + t.configurationService),
                 t.target) {
                     var i = new Z(t);
-                    console.log('i',i)
                     i.init(),
                     i.listeners.fire("onTargetReady", {}),
                     WirisPlugin.instances[e.name] = i,
                     WirisPlugin.currentInstance = i
                 }
-                console.log('t',t)
             })
         }
     });
