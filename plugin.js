@@ -4467,8 +4467,8 @@
                     l.get("enableAccessibility") && (s.alt = L.mathMLToAccessible(i, r, a))
                 } else {
                     var u;
-                    console.log('JSON.parse(e.createShowImageSrc(a, r))',JSON.parse(e.createShowImageSrc(a, r)))
-                    if ("warning" == (u = JSON.parse(e.createShowImageSrc(a, r))).status)
+                    console.log('JSON.parse(e.createShowImageSrc(a, r))',JSON.parse(JSON.stringify( e.createShowImageSrc(a, r) ) ) )
+                    if ("warning" == (u = JSON.parse( e.createShowImageSrc(a, r)  )).status)
                         try {
                             u = JSON.parse(f.getService("showimage", a))
                         } catch (e) {
@@ -4609,10 +4609,28 @@
                 var o = {};
                 for (var r in e)
                     "mml" != r && (o[r] = e[r]);
+
+                // console.log(o.formula = com.wiris.js.JsPluginTools.md5encode(v.propertiesToString(i)),
+                // o.lang = void 0 === t ? "en" : t,
+                // o.version = l.get("version"),
+                // f.getService("showimage", v.httpBuildQuery(o), !0),"======",v.httpBuildQuery(o))
+
                 return o.formula = com.wiris.js.JsPluginTools.md5encode(v.propertiesToString(i)),
                 o.lang = void 0 === t ? "en" : t,
                 o.version = l.get("version"),
                 f.getService("showimage", v.httpBuildQuery(o), !0)
+                // console.log(v.propertiesToString(i),v.httpBuildQuery(o),o,com.wiris.js.JsPluginTools.md5encode(v.propertiesToString(i)))
+                // return {
+                //     "status": "ok",
+                //     "result": {
+                //     "width": "147",
+                //     "height": "50",
+                //     "baseline": "34",
+                //     "alt": "x equals fraction numerator negative b plus-or-minus square root of b squared minus 4 a c end root over denominator 2 a end fraction",
+                //     "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:wrs=\"http://www.wiris.com/xml/cvs-extension\" height=\"50\" width=\"147\" wrs:baseline=\"34\"><!--MathML: <math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>b</mi><mo>&#xB1;</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></math>--><defs><style type=\"text/css\">@font-face{font-family:'ae2ef524fbf3d9fe611d5a8e90fefdc';src:url(data:font/truetype;charset=utf-8;base64,AAEAAAAMAIAAAwBAT1MvMjv/KqIAAADMAAAATmNtYXDgWxEdAAABHAAAADRjdnQgAAAABwAAAVAAAAAEZ2x5ZoYrxVAAAAFUAAAA0WhlYWQIlgkyAAACKAAAADZoaGVhC0UKCQAAAmAAAAAkaG10eByEAIUAAAKEAAAACGxvY2EAAAVKAAACjAAAAAxtYXhwBIoEWwAAApgAAAAgbmFtZXSF9ZsAAAK4AAABrXBvc3QDogHPAAAEaAAAACBwcmVwukanGAAABIgAAAANAAAEwAGQAAUAAAgACAAAAAAACAAIAAAAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgICAAAAAg8AMGe/57AAAHPgGyAAAAAAACAAEAAQAAABQAAwABAAAAFAAEACAAAAAEAAQAAQAAAGH//wAAAGH///+gAAEAAAAAAAAABwACAFUAAAMAA6sAAwAHAAAzESERJSERIVUCq/2rAgD+AAOr/FVVAwAAAwAt/3QEAwRZAAsAFwAdADsYAbAdELAD1LADELAU1LAUELAc1LAcELAJ1LAcELAOPLAJELAbPACwBhCwEdSwBhCwANSwABCwF9QwMQEiABEWEjMyEjcQJgYWAwIGIyImNTQ2MwE1BhMjEgIBs/7fFvWy07oDhYZwFgxOhVmysoUB7YwEslEEWf7f/t71/t8BM+MBp5yyLf6d/wBlyJzfsvxZjF0B5/1eAAAAAAEAAAABAAC98jIEXw889QADCAD/////0r1fff/////SvV99AAH+9QQDBkMAAAAKAAIAAQAAAAAAAQAABz7+TgAAC7gAAf/8BAMAAQAAAAAAAAAAAAAAAAAAAAIDUgBVBEwALQAAAAAAAAAoAAAA0QABAAAAAgAeAAMAAAAAAAIAgAQAAAAAAAQAADsAAAAAAAAAFQECAAAAAAAAAAEAFgAAAAAAAAAAAAIADgAWAAAAAAAAAAMANAAkAAAAAAAAAAQAFgBYAAAAAAAAAAUAFgBuAAAAAAAAAAYACwCEAAAAAAAAAAgAHACPAAEAAAAAAAEAFgAAAAEAAAAAAAIADgAWAAEAAAAAAAMANAAkAAEAAAAAAAQAFgBYAAEAAAAAAAUAFgBuAAEAAAAAAAYACwCEAAEAAAAAAAgAHACPAAMAAQQJAAEAFgAAAAMAAQQJAAIADgAWAAMAAQQJAAMANAAkAAMAAQQJAAQAFgBYAAMAAQQJAAUAFgBuAAMAAQQJAAYACwCEAAMAAQQJAAgAHACPAE0AYQB0AGgAIABGAG8AbgB0ACAAMgBSAGUAZwB1AGwAYQByAE0AYQB0AGgAcwAgAEYAbwByACAATQBvAHIAZQAgAE0AYQB0AGgAIABGAG8AbgB0ACAAMgBNAGEAdABoACAARgBvAG4AdAAgADIAVgBlAHIAcwBpAG8AbgAgADEALgAwTWF0aF9Gb250XzIATQBhAHQAaABzACAARgBvAHIAIABNAG8AcgBlAAAAAAMAAAAAAAADnwHPAAAAAAAAAAAAAAAAAAAAAAAAAAC5ByIAAI2FGACyAAAAAAAA)format('truetype');font-weight:normal;font-style:normal;}@font-face{font-family:'math19244194cbc38427b5aca056d4d';src:url(data:font/truetype;charset=utf-8;base64,AAEAAAAMAIAAAwBAT1MvMi7iBAIAAADMAAAATmNtYXDErB0vAAABHAAAAERjdnQgDVUNBwAAAWAAAAA6Z2x5ZguHXwYAAAGcAAABmGhlYWQMCZu1AAADNAAAADZoaGVhCGsLjwAAA2wAAAAkaG10eD6dRccAAAOQAAAAEGxvY2EAHNQvAAADoAAAABRtYXhwBTwFPgAAA7QAAAAgbmFtZaBxlY4AAAPUAAABn3Bvc3QB9wD6AAAFdAAAACBwcmVwa1uragAABZQAAAAUAAADOgGQAAUAAAQABAAAAAAABAAEAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgICAAAAAg1UADev96AAAD6ACWAAAAAAACAAEAAQAAABQAAwABAAAAFAAEADAAAAAIAAgAAgAAAD0AsSIS//8AAAA9ALEiEv///8T/Ud3xAAEAAAAAAAAAAAAAAVQDLACAAQAAVgAqAlgCHgEOASwCLABaAYACgACgANQAgAAAAAAAAAArAFUAgACrANUBAAErAAcAAAACAFUAAAMAA6sAAwAHAAAzESERJSERIVUCq/2rAgD+AAOr/FVVAwAAAgCAAOsC1QIVAAMABwBlGAGwCBCwBtSwBhCwBdSwCBCwAdSwARCwANSwBhCwBzywBRCwBDywARCwAjywABCwAzwAsAgQsAbUsAYQsAfUsAcQsAHUsAEQsALUsAYQsAU8sAcQsAQ8sAEQsAA8sAIQsAM8MTATITUhHQEhNYACVf2rAlUBwFXVVVUAAgCA//8CgAKrAAsADwBlGAGwEBCwD9SwDxCwADywABCwAdSwARCwBNSwBBCwBdSwARCwCjywBBCwBzywBRCwDjwAsBAQsA/UsA8QsAzUsAwQsAnUsAkQsArUsAoQsAHUsAEQsALUsAEQsAQ8sAoQsAc8MDETMzUzFTMVIxUjJwcRIRUhgNZV1dVVAdUCAP4AAdXW1lbU1QH+1VUAAQCAAVUC1QGrAAMAMBgBsAQQsQAD9rADPLECB/WwATyxBQPmALEAABMQsQAG5bEAARMQsAE8sQMF9bACPBMhFSGAAlX9qwGrVgABAAAAAQAA7Hbb7l8PPPUAAwQA/////9Q5K/X/////1Dkr9QAA/yAEgAOrAAAACgACAAEAAAAAAAEAAAPo/2oAAAu4AAD/tgSAAAEAAAAAAAAAAAAAAAAAAAAEA1IAVQNWAIADAACAA1YAgAAAAAAAAAAoAAAAsgAAAU4AAAGYAAEAAAAEAF4ABQAAAAAAAgCABAAAAAAABAAA3gAAAAAAAAAVAQIAAAAAAAAAAQASAAAAAAAAAAAAAgAOABIAAAAAAAAAAwAwACAAAAAAAAAABAASAFAAAAAAAAAABQAWAGIAAAAAAAAABgAJAHgAAAAAAAAACAAcAIEAAQAAAAAAAQASAAAAAQAAAAAAAgAOABIAAQAAAAAAAwAwACAAAQAAAAAABAASAFAAAQAAAAAABQAWAGIAAQAAAAAABgAJAHgAAQAAAAAACAAcAIEAAwABBAkAAQASAAAAAwABBAkAAgAOABIAAwABBAkAAwAwACAAAwABBAkABAASAFAAAwABBAkABQAWAGIAAwABBAkABgAJAHgAAwABBAkACAAcAIEATQBhAHQAaAAgAEYAbwBuAHQAUgBlAGcAdQBsAGEAcgBNAGEAdABoAHMAIABGAG8AcgAgAE0AbwByAGUAIABNAGEAdABoACAARgBvAG4AdABNAGEAdABoACAARgBvAG4AdABWAGUAcgBzAGkAbwBuACAAMQAuADBNYXRoX0ZvbnQATQBhAHQAaABzACAARgBvAHIAIABNAG8AcgBlAAADAAAAAAAAAfQA+gAAAAAAAAAAAAAAAAAAAAAAAAAAuQcRAACNhRgAsgAAABUUE7EAAT8=)format('truetype');font-weight:normal;font-style:normal;}</style></defs><text font-family=\"Arial\" font-size=\"16\" font-style=\"italic\" text-anchor=\"middle\" x=\"4.5\" y=\"34\">x</text><text font-family=\"math19244194cbc38427b5aca056d4d\" font-size=\"16\" text-anchor=\"middle\" x=\"17.5\" y=\"34\">=</text><line stroke=\"#000000\" stroke-linecap=\"square\" stroke-width=\"1\" x1=\"28.5\" x2=\"143.5\" y1=\"28.5\" y2=\"28.5\"/><text font-family=\"math19244194cbc38427b5aca056d4d\" font-size=\"16\" text-anchor=\"middle\" x=\"36.5\" y=\"22\">&#x2212;</text><text font-family=\"Arial\" font-size=\"16\" font-style=\"italic\" text-anchor=\"middle\" x=\"47.5\" y=\"22\">b</text><text font-family=\"math19244194cbc38427b5aca056d4d\" font-size=\"16\" text-anchor=\"middle\" x=\"60.5\" y=\"22\">&#xB1;</text><polyline fill=\"none\" points=\"12,-20 11,-20 5,0 2,-8\" stroke=\"#000000\" stroke-linecap=\"square\" stroke-width=\"1\" transform=\"translate(67.5,24.5)\"/><polyline fill=\"none\" points=\"5,0 2,-8 0,-7\" stroke=\"#000000\" stroke-linecap=\"square\" stroke-width=\"1\" transform=\"translate(67.5,24.5)\"/><line stroke=\"#000000\" stroke-linecap=\"square\" stroke-width=\"1\" x1=\"79.5\" x2=\"141.5\" y1=\"4.5\" y2=\"4.5\"/><text font-family=\"Arial\" font-size=\"16\" font-style=\"italic\" text-anchor=\"middle\" x=\"85.5\" y=\"22\">b</text><text font-family=\"Arial\" font-size=\"12\" text-anchor=\"middle\" x=\"94.5\" y=\"15\">2</text><text font-family=\"math19244194cbc38427b5aca056d4d\" font-size=\"16\" text-anchor=\"middle\" x=\"105.5\" y=\"22\">&#x2212;</text><text font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" x=\"117.5\" y=\"22\">4</text><text font-family=\"ae2ef524fbf3d9fe611d5a8e90fefdc\" font-size=\"16\" font-style=\"italic\" text-anchor=\"middle\" x=\"126.5\" y=\"22\">a</text><text font-family=\"Arial\" font-size=\"16\" font-style=\"italic\" text-anchor=\"middle\" x=\"135.5\" y=\"22\">c</text><text font-family=\"Arial\" font-size=\"16\" text-anchor=\"middle\" x=\"81.5\" y=\"45\">2</text><text font-family=\"ae2ef524fbf3d9fe611d5a8e90fefdc\" font-size=\"16\" font-style=\"italic\" text-anchor=\"middle\" x=\"90.5\" y=\"45\">a</text></svg>",
+                //     "format": "svg"
+                //     }
+                // }
             }
         }, {
             key: "codeImgTransform",
@@ -5083,7 +5101,7 @@
                         Object.keys(r);
                         if (l.addConfiguration(r),
                         l.addConfiguration(F),
-                        // this.loadServicePaths(),
+                        this.loadServicePaths(),
                         this.loadLangFile(),
                         this.loadCSS(),
                         null === e.stringManager) {
@@ -5107,7 +5125,7 @@
                     Object.keys(r);
                     if (l.addConfiguration(r),
                     l.addConfiguration(F),
-                    // this.loadServicePaths(),
+                    this.loadServicePaths(),
                     this.loadLangFile(),
                     this.loadCSS(),
                     null === e.stringManager) {
@@ -5122,6 +5140,7 @@
         }, {
             key: "loadServicePaths",
             value: function() {
+                this.integrationPath = "https://anishmprasad.com/ckeditor_wiris/integration/configurationjs.php";
                 var e = this.integrationPath.replace("configurationjs", "createimage")
                   , t = this.integrationPath.replace("configurationjs", "showimage")
                   , i = (e = this.integrationPath.replace("configurationjs", "createimage"),
@@ -5710,7 +5729,6 @@
                 icon: CKEDITOR.plugins.getPath("ckeditor_wiris") + "./icons/chem.png"
             }),
             e.on("instanceReady", function() {
-                console.log(e.container,e.container.$)
                 var t = {};
                 if (t.editorObject = e,
                 t.target = e.container.$,
