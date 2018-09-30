@@ -4464,12 +4464,12 @@
         }, {
             key: "loadServicePaths",
             value: function() {
-                this.integrationPath = "https://ckeditor-wiris.herokuapp.com/configurationjs.php";
-                var e = this.integrationPath.replace("configurationjs", "createimage")
-                  , t = this.integrationPath.replace("configurationjs", "showimage")
-                  , i = (e = this.integrationPath.replace("configurationjs", "createimage"),
-                this.integrationPath.replace("configurationjs", "getmathml"))
-                  , n = this.integrationPath.replace("configurationjs", "service");
+                this.integrationPath = "https://ckeditor-wiris.herokuapp.com/serviceEndpoint.php";
+                var e = this.integrationPath.replace("serviceEndpoint", "createimage")
+                  , t = this.integrationPath.replace("serviceEndpoint", "showimage")
+                  , i = (e = this.integrationPath.replace("serviceEndpoint", "createimage"),
+                this.integrationPath.replace("serviceEndpoint", "getmathml"))
+                  , n = this.integrationPath.replace("serviceEndpoint", "service");
                 if (0 == this.integrationPath.indexOf("/")) {
                     var r = this.getServerPath();
                     t = r + t,
@@ -5028,7 +5028,7 @@
                 if (t.editorObject = e,
                 t.target = e.container.$,
                 t.configurationService = {
-                    "_wrs_conf_editorUrl": "http://localhost:5050/ckeditor/plugins/ckeditor_wiris/core/editor.js",
+                    "_wrs_conf_editorUrl": CKEDITOR.plugins.getPath("ckeditor_wiris") + "./core/editor.js",
                     "_wrs_conf_hostPlatform": "unknown",
                     "_wrs_conf_wirisPluginPerformance": true,
                     "_wrs_conf_modalWindow": true,
