@@ -5140,7 +5140,7 @@
         }, {
             key: "loadServicePaths",
             value: function() {
-                this.integrationPath = "https://anishmprasad.com/ckeditor_wiris/integration/configurationjs.php";
+                this.integrationPath = "https://ckeditor-wiris.herokuapp.com/configurationjs.php";
                 var e = this.integrationPath.replace("configurationjs", "createimage")
                   , t = this.integrationPath.replace("configurationjs", "showimage")
                   , i = (e = this.integrationPath.replace("configurationjs", "createimage"),
