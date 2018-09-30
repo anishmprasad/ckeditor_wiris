@@ -1,7 +1,7 @@
 ## Requirements
 
-CKEditor 3.0 or higher installed.
-A valid license to install the integration in a production environment; otherwise, you can use the downloaded file just for demo purposes.
+* CKEditor 3.0 or higher installed.
+* A valid license to install the integration in a production environment; otherwise, you can use the downloaded file just for demo purposes.
 
 ## Usage / Include it in your platform
 
