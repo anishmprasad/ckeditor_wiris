@@ -1,9 +1,15 @@
+# ckeditor_wiris
+
+A WIRIS Plugin for CKEditor
+
 ## Requirements
 
 * CKEditor 3.0 or higher installed.
 * A valid license to install the integration in a production environment; otherwise, you can use the downloaded file just for demo purposes.
 
 ## Usage / Include it in your platform
+
+You must include some content on your CKEditor configuration file ckeditor/config.js (see CKEditor documentation).
 
 ```js
 /*
