@@ -2665,9 +2665,9 @@
                 i.type = "text/javascript";
                 var n = l.get("editorUrl")
                   , r = document.createElement("a");
-                r.href = n,
-                0 == window.location.href.indexOf("https://") && "http:" == r.protocol && (r.protocol = "https:"),
-                n = "80" == r.port || "443" == r.port ? r.protocol + "//" + r.hostname + "/" + r.pathname : r.protocol + "//" + r.hostname + ":" + r.port + "/" + r.pathname;
+                r.href = n;
+                // 0 == window.location.href.indexOf("https://") && "http:" == r.protocol && (r.protocol = "https:"),
+                // n = "80" == r.port || "443" == r.port ? r.protocol + "//" + r.hostname + "/" + r.pathname : r.protocol + "//" + r.hostname + ":" + r.port + "/" + r.pathname;
                 var s = {};
                 "editor"in this.environment ? s.editor = this.environment.editor : s.editor = "unknown",
                 "mode"in this.environment ? s.mode = this.environment.mode : s.mode = l.get("saveMode"),
@@ -4464,7 +4464,7 @@
         }, {
             key: "loadServicePaths",
             value: function() {
-                this.integrationPath = "https://ckeditor-wiris.herokuapp.com/serviceEndpoint.php";
+                this.integrationPath = "https://anishmprasad.com/ckeditor_wiris/integration/serviceEndpoint.php";
                 var e = this.integrationPath.replace("serviceEndpoint", "createimage")
                   , t = this.integrationPath.replace("serviceEndpoint", "showimage")
                   , i = (e = this.integrationPath.replace("serviceEndpoint", "createimage"),
@@ -4498,7 +4498,7 @@
                 -1 == t.indexOf(i) && (i = "en");
                 var n = document.createElement("script");
                 n.type = "text/javascript",
-                n.src = "http://localhost:5050/ckeditor/plugins/ckeditor_wiris/" + this.integrationModel.langFolderName + "/strings.js",
+                n.src = CKEDITOR.plugins.getPath("ckeditor_wiris") + this.integrationModel.langFolderName + "/strings.js",
                 n.onload = function() {
                     e.getStringManager().loadStrings(wrs_strings)
                 },
@@ -4510,7 +4510,7 @@
                 var e = document.createElement("link");
                 e.setAttribute("rel", "stylesheet"),
                 e.setAttribute("type", "text/css"),
-                e.setAttribute("href", "http://localhost:5050/ckeditor/plugins/ckeditor_wiris/core/styles.css"),
+                e.setAttribute("href", CKEDITOR.plugins.getPath("ckeditor_wiris")+"core/styles.css"),
                 document.getElementsByTagName("head")[0].appendChild(e)
             }
         }, {
