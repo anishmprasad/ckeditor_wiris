@@ -4910,40 +4910,37 @@
             key: "addEditorListeners",
             value: function() {
                 var e = this.editorObject;
+                var dataInfo = document.getElementById(e.name);
+                var data = dataInfo && dataInfo.dataset.info == undefined ? e.getData() : dataInfo.dataset.info
+                // e.resetDirty()) : ( e.setData(B.initParse(e.getData())),
                 void 0 !== e.config.wirislistenersdisabled && e.config.wirislistenersdisabled ? (e.on("instanceReady", function(e) {
-                    this.checkElement()
-                }
-                .bind(this)),
-                e.resetDirty()) : (e.setData(B.initParse(e.getData())),
-                e.on("focus", function(e) {
-                    WirisPlugin.currentInstance = WirisPlugin.instances[e.editor.name]
-                }),
-                e.on("contentDom", function() {
-                    e.on("doubleclick", function(e) {
-                        ("img" == e.data.element.$.nodeName.toLowerCase() && v.containsClass(e.data.element.$, l.get("imageClassName")) || v.containsClass(e.data.element.$, l.get("CASClassName"))) && (e.data.dialog = null)
-                    }
-                    .bind(this))
-                }
-                .bind(this)),
-                e.on("setData", function(e) {
-                    e.data.dataValue = B.initParse(e.data.dataValue || "")
-                }
-                .bind(this)),
-                e.on("afterSetData", function(e) {
-                    void 0 !== B.observer && Array.prototype.forEach.call(document.getElementsByClassName("Wirisformula"), function(e) {
-                        B.observer.observe(e)
-                    })
-                }
-                .bind(this)),
-                e.on("getData", function(e) {
-                    e.data.dataValue = B.endParse(e.data.dataValue || "")
-                }
-                .bind(this)),
-                e.on("mode", function(e) {
-                    this.checkElement()
-                }
-                .bind(this)),
-                this.checkElement())
+                        this.checkElement();
+                      }.bind(this)), e.resetDirty()) : (e.setData(B.initParse(data)), e.on(
+                      "focus",
+                      function(e) {
+                        WirisPlugin.currentInstance =
+                          WirisPlugin.instances[e.editor.name];
+                      }
+                    ), e.on("contentDom", function() {
+                        e.on("doubleclick", function(e) {
+                            (("img" == e.data.element.$.nodeName.toLowerCase() && v.containsClass(e.data.element.$, l.get("imageClassName"))) || v.containsClass(e.data.element.$, l.get("CASClassName"))) && (e.data.dialog = null);
+                          }.bind(this));
+                      }.bind(this)), e.on("setData", function(e) {
+                        e.data.dataValue = B.initParse(e.data.dataValue || "");
+                      }.bind(this)), e.on("afterSetData", function(e) {
+                        void 0 !== B.observer && Array.prototype.forEach.call(
+                            document.getElementsByClassName(
+                              "Wirisformula"
+                            ),
+                            function(e) {
+                              B.observer.observe(e);
+                            }
+                          );
+                      }.bind(this)), e.on("getData", function(e) {
+                        e.data.dataValue = B.endParse(e.data.dataValue || "");
+                      }.bind(this)), e.on("mode", function(e) {
+                        this.checkElement();
+                      }.bind(this)), this.checkElement());
             }
         }, {
             key: "checkElement",
