@@ -28,7 +28,7 @@ config.allowedContent = true;
 
 ## Inline Editor
 
-
+Use `data-info` attribute for inline editor for rendering mathjax rendered formulas on string
 
 ```html
 
