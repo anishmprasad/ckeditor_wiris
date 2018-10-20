@@ -26,6 +26,25 @@ If you use the Full MathML mode and for CKeditor versions higher than 4.0 you ha
 config.allowedContent = true;
 ```
 
+## Inline Editor
+
+
+
+```html
+
+  <div 
+    className={ "editor-block" } 
+    id={editorInstance} 
+    contentEditable={this.props.contentEditable}
+    dangerouslySetInnerHTML={this.createMarkup()}
+    data-info={data}
+    onClick={this.onClickEditor}
+    placeholder={this.props.placeholder}
+  /> 
+
+```
+
+
 ## Licence
 
 GNU Global Public Licence v3.0
