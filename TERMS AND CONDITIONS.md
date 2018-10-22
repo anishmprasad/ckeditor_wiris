@@ -28,11 +28,11 @@ Software licensed to CLIENT shall be accessible only from the URLs determined by
 In this case, section V shall not be applicable.
 B) Software hosted in the CLIENT’s servers
 If CLIENT wishes to download the Software into his own web servers, the following minimum conditions will have to be met by its system:
-▪ Linux/Solaris operating system.
-▪ Web server for location of web pages and servlets.
-▪ Java Virtual Machine 1.4 or higher.
-▪ User account for the execution of the mathematical engine and the calculations Server (daemon).
-▪ Disc space of 1G.
+1. Linux/Solaris operating system.
+2. Web server for location of web pages and servlets.
+3. Java Virtual Machine 1.4 or higher.
+4. User account for the execution of the mathematical engine and the calculations Server (daemon).
+5. Disc space of 1G.
 Software shall be installed in CLIENT’s servers by LICENSOR, who shall ensure that the Software works adequately before finishing such installation. In these circumstances, CLIENT will have to inform LICENSOR of the number of web servers into which Software shall be downloaded.
 CLIENT acknowledges and agrees that the Software installed in its servers shall include license verification components in order for LICENSOR to be able to check the status of the License at all times. Such components do not include access to the servers of the CLIENT.
 LICENSOR will inform CLIENT of any update or upgrade of the Software when they become generally available. CLIENT undertakes to download any such updates or upgrades as soon as possible following communication by LICENSOR. CLIENT understands and agrees that maintenance services provided by LICENSOR pursuant to section V below shall be provided solely to the last version of the Software made available to CLIENT by LICENSOR and, therefore, maintenance services on older versions shall cease following twelve (12) month after the above mentioned communication.
@@ -48,10 +48,10 @@ In such case that, in significant number, the system was used by persons or inst
 
 Maintenance of the SOFTWARE shall be provided by LICENSOR for the entire term of the LICENSE. Such service shall be rendered exclusively by LICENSOR
 Maintenance of WIRIS shall consist of:
-▪ Migration of the application to new servers
-▪ Installation of patches of the system.
-▪ Elaboration of statistics of the use of the platform.
-▪ Improvements in the functionalities described in the LICENSE, by means of new versions of the Java Virtual Machine. Such improvements shall not include new functionalities.
+1. Migration of the application to new servers
+2. Installation of patches of the system.
+3. Elaboration of statistics of the use of the platform.
+4. Improvements in the functionalities described in the LICENSE, by means of new versions of the Java Virtual Machine. Such improvements shall not include new functionalities.
 Taking into account the constant evolution of the Software related technologies (Java, Javascript, Flash,etc) and of the web browsers available in the market, the commercialised version of WIRIS may need the installation of patches. With the apparition of new version of the Web browsers, Java Virtual Machine and Flash players some of the functionalities of the Software may malfunction. Also, the inclusion of patches for the mathematical engine may be available when necessary.
 
 # Initial Training
@@ -98,81 +98,81 @@ Governing Law and Jurisdiction. This LICENSE is governed by and construed under 
 
 ATTACHMENT II: DESCRIPTION OF THE CAPABILITIES OF WIRIS SOFTWARE
 WIRIS CAS - BY AREAS OF KNOWLEDGE www.wiris.com/cas/docs/release www.wiris.com/cas/features
-Mathematical language
-• All mathematical expressions used by WIRIS follow normal notations in mathematics.
-Real and Complex Numbers
-• Whole number, rational, radical (automatic normalisation), decimals, real (including constants such as fl and e) and complex numbers arithmetic.
-• Divisibility functions (gcd, mcm, prime and factorisation) with whole-numbers.
-• Transcendental functions of real variable, that is trigonometric, exponential and algorithmic.
-Polynomial algebra (unvaried and multivariate)
-• Polynomial algebra with numeric coefficients (whole, rational, decimal and complex) or symbolic (parameters).
-• Search of root of polynomials: whole roots, rational, radicals, decimals and complex.
-• Solving of algebraic systems (also with parameters).
-Rational Functions
-• Arithmetic and decomposition into simple fractions.
-Linear algebra
-• Vector and matrix algebra. Numeric and symbolic coefficients.
-• Scale and vector multiplication.
-• Range, determinant and trace.
-• Resolution of linear equations with matrix annotation (also with parameters). Linear systems dependant on parameters.
-• Linear algebra with vectors and matrix with symbolic coefficients (mathematical expressions form by composition of elemental functions).
-Analysis
-• Limit of functions.
-• Symbolic derivation. Taylor polynomials.
-• Symbolic calculation of primitives. Primitives dependant on parameters. Defined integrals.
-• Functions domains. Monotony intervals. Asymptotes. Absolute and relative extremes. Inflection points.
-• Numeric successions: arithmetic and geometric progressions. Series.
-• Infinite symbol and arithmetic.
-Descriptive statistic
-• Relative and absolute frequency, typical deviation, medium and quartiles. Linear regression.
-• Data representation: histogram, block diagram, bar graph.
-• Data representation: lines, slices, etc.
-Combination
-• Calculation of the number of permutations, variations and combinations.
-• List and group. Union, intersection and complementary lists and groups.
-• Factorial and binomial numbers.
-• Generation of combinatory subgroups.
-Measure units
-• Measure units of the international System and other systems.
-• Arithmetic.
-• Unit conversion.
-Value grouping
-• Building of sequences, lists, vectors and relations using Standard mathematical annotations.
-• Selection of elements of a grouping.
-Manipulation of mathematical expressions
-• Resolution of general equation systems (not necessarily linear). Numeric resolution of equation systems.
-• Resolution of de-equation systems in one variable.
-• Simplification of general mathematical expressions.
-• Composition of functions and inverse operator of functions.
-• Substitutions.
-2D/3D Geometry
-• Creation of geometrical figures: points, vectors, segments, lines, circumference, arches, conical, triangles, polygons, curves and surface.
-• Operations with geometrical figures: intersection, transformation, affinity, distance,...
-• Automatic conversion of equations and geometrical objects.
-• Conversions between different equations of the line: explicit, implicit, etc.
-2D Representation
-• Representation of geometrical figures of the plane.
-• Table properties: measure, colour, zoom, axis, etc.
-• Export to Adobe Portable Document Format (pdf), PostScript, JPG, PNG formats.
-• Graphical representation of 2D functions.
-• Representation of functions including domain, asymptotes, maximums, minimums, singular points, inflection points, symmetries, etc.
-3D Representation
-• Representation of geometrical figures in space.
-• Table properties: measure, colour, zoom, axis, etc.
-• Export to JPG, PNG formats.
-• Graphical representation 3D functions.
-Programming
-Own developed high level code, imperative, structured and functional. Execution of subroutines, recursivity.
+##### Mathematical language
+1. All mathematical expressions used by WIRIS follow normal notations in mathematics.
+##### Real and Complex Numbers
+1. Whole number, rational, radical (automatic normalisation), decimals, real (including constants such as fl and e) and complex numbers arithmetic.
+2. Divisibility functions (gcd, mcm, prime and factorisation) with whole-numbers.
+3. Transcendental functions of real variable, that is trigonometric, exponential and algorithmic.
+##### Polynomial algebra (unvaried and multivariate)
+1. Polynomial algebra with numeric coefficients (whole, rational, decimal and complex) or symbolic (parameters).
+2. Search of root of polynomials: whole roots, rational, radicals, decimals and complex.
+3. Solving of algebraic systems (also with parameters).
+##### Rational Functions
+1. Arithmetic and decomposition into simple fractions.
+##### Linear algebra
+1. Vector and matrix algebra. Numeric and symbolic coefficients.
+2. Scale and vector multiplication.
+3. Range, determinant and trace.
+4. Resolution of linear equations with matrix annotation (also with parameters). Linear systems dependant on parameters.
+5. Linear algebra with vectors and matrix with symbolic coefficients (mathematical expressions form by composition of elemental functions).
+##### Analysis
+1. Limit of functions.
+2. Symbolic derivation. Taylor polynomials.
+3. Symbolic calculation of primitives. Primitives dependant on parameters. Defined integrals.
+4. Functions domains. Monotony intervals. Asymptotes. Absolute and relative extremes. Inflection points.
+5. Numeric successions: arithmetic and geometric progressions. Series.
+6. Infinite symbol and arithmetic.
+##### Descriptive statistic
+1. Relative and absolute frequency, typical deviation, medium and quartiles. Linear regression.
+2. Data representation: histogram, block diagram, bar graph.
+3. Data representation: lines, slices, etc.
+##### Combination
+1. Calculation of the number of permutations, variations and combinations.
+2. List and group. Union, intersection and complementary lists and groups.
+3. Factorial and binomial numbers.
+4. Generation of combinatory subgroups.
+##### Measure units
+1. Measure units of the international System and other systems.
+2. Arithmetic.
+3. Unit conversion.
+##### Value grouping
+1. Building of sequences, lists, vectors and relations using Standard mathematical annotations.
+2. Selection of elements of a grouping.
+##### Manipulation of mathematical expressions
+1. Resolution of general equation systems (not necessarily linear). Numeric resolution of equation systems.
+2. Resolution of de-equation systems in one variable.
+3. Simplification of general mathematical expressions.
+4. Composition of functions and inverse operator of functions.
+5. Substitutions.
+##### 2D/3D Geometry
+1. Creation of geometrical figures: points, vectors, segments, lines, circumference, arches, conical, triangles, polygons, curves and surface.
+2. Operations with geometrical figures: intersection, transformation, affinity, distance,...
+3. Automatic conversion of equations and geometrical objects.
+4. Conversions between different equations of the line: explicit, implicit, etc.
+##### 2D Representation
+1. Representation of geometrical figures of the plane.
+2. Table properties: measure, colour, zoom, axis, etc.
+3. Export to Adobe Portable Document Format (pdf), PostScript, JPG, PNG formats.
+4. Graphical representation of 2D functions.
+5. Representation of functions including domain, asymptotes, maximums, minimums, singular points, inflection points, symmetries, etc.
+##### 3D Representation
+1. Representation of geometrical figures in space.
+2. Table properties: measure, colour, zoom, axis, etc.
+3. Export to JPG, PNG formats.
+4. Graphical representation 3D functions.
+5. Programming
+6. Own developed high level code, imperative, structured and functional. Execution of subroutines, recursivity.
 WIRIS Editor www.wiris.com/editor/docs/release www.wiris.com/editor/features
-User interfaces
-• HTML and Javascript
-• WYSIWYG editor for formula creation.
-• Input and output format MathML.
-Web-service
-• Web service for image generation in PNG format.
+##### User interfaces
+1. HTML and Javascript
+2. WYSIWYG editor for formula creation.
+3. Input and output format MathML.
+##### Web-service
+1. Web service for image generation in PNG format.
 WIRIS quizzes www.wiris.com/quizzes/docs/release www.wiris.com/quizzes/features
-User interfaces
-• User interface to upgrade standard quizzes module in Moodle 1.9 and Moodle 2.X
-Web-service
-• Generation of random parameters in questions
-• Automatic evaluation of mathematical answers
+##### User interfaces
+1. User interface to upgrade standard quizzes module in Moodle 1.9 and Moodle 2.X
+##### Web-service
+1. Generation of random parameters in questions
+2. Automatic evaluation of mathematical answers
