@@ -35,7 +35,7 @@ wirisimageservicepath = /<context>/render
 1. .NET Framework 2.0 or higher
 2. IIS 5.1 or higher
 
-####Installation
+#### Installation
 
 1. Download the ASP .NET version of the WIRIS editor - server components.
 2. Deploy the zip file into IIS with ASP .NET enabled and create a Web application.
